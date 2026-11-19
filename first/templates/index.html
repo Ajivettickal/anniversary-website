@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f4">
+  <title>Our Little Love Story ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="ambient-hearts" aria-hidden="true"></div>
+
+  <section class="welcome-screen" id="welcome">
+    <div class="welcome-card">
+      <span class="tiny-heart">♡</span>
+      <p class="eyebrow">A little something for you</p>
+      <h1>Our story is<br><em>my favourite.</em></h1>
+      <p class="welcome-copy">One year. Countless memories. And a thousand reasons to choose you again.</p>
+      <button class="main-button" id="startButton">Open our story <span>♡</span></button>
+      <p class="scroll-hint">MADE WITH LOVE · JUST FOR YOU</p>
+    </div>
+    <span class="decor decor-one">♡</span><span class="decor decor-two">✳</span>
+  </section>
+
+  <main id="story" class="hidden">
+    <header class="topbar">
+      <a class="brand" href="#top">you & me <span>♡</span></a>
+      <nav><a href="#journey">Our journey</a><a href="#memories">Memories</a><a href="#letter">The letter</a></nav>
+    </header>
+
+    <section class="hero section-wrap" id="top">
+      <div class="hero-text">
+        <p class="eyebrow">365 days of us</p>
+        <h2>One year down,<br><em>forever to go.</em></h2>
+        <p>Some people make life beautiful just by being in it. You did that for me.</p>
+        <a class="text-link" href="#journey">Take a walk through our story ↓</a>
+      </div>
+      <div class="hero-polaroid polaroid">
+        <div class="photo-slot cover-slot"><img src="{% static 'img/girl.jpeg' %}" alt="Our favourite picture" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')"><span class="photo-help">Add your photo<br><small>images/cover.jpg</small></span></div>
+        <p>my favourite person ♡</p>
+      </div>
+    </section>
+
+    <section class="journey section-wrap" id="journey">
+      <div class="section-title"><p class="eyebrow">Every love has a beginning</p><h2>Our little <em>timeline.</em></h2><p>Tap each moment to open a little memory.</p></div>
+      <div class="timeline">
+        <article class="timeline-item left">
+          <button class="timeline-card" data-title="The day we met" data-message="The day an ordinary moment became the beginning of something extraordinary.First when i see you infront of the indoor auditorium builing thats when i saw saw you for the first. you were staying and talking with you friends and in the lab when yo were discussing somthing with sir and your classmates.">
+            <span class="timeline-date">THE BEGINNING</span><strong>The day we met</strong><span class="tap-note">Tap to remember ♡</span>
+          </button>
+        </article>
+        <article class="timeline-item right">
+          <button class="timeline-card" data-title="Our first special moment" data-message="I still smile when I think about these days. First day when you shared your photos after you got drunk, In the park when we shared our sweet moments near the JSS School ">
+            <span class="timeline-date">A FAVOURITE FIRST</span><strong>Our first special moment</strong><span class="tap-note">Tap to remember ♡</span>
+          </button>
+        </article>
+        <article class="timeline-item left">
+          <button class="timeline-card" data-title="A day I'll always keep" data-message="It wasn't just the place or what we did. It was being there with you that made it unforgettable. Where we shared our sweetest moments ">
+            <span class="timeline-date">A DAY TO KEEP</span><strong>A day I'll always keep</strong><span class="tap-note">Tap to remember ♡</span>
+          </button>
+        </article>
+        <article class="timeline-item right">
+          <button class="timeline-card" data-title="One whole year of us" data-message="And here we are: one year of learning, laughing, growing and loving. Here's to everything still ahead.">
+            <span class="timeline-date">YOUR ANNIVERSARY DATE</span><strong>One whole year of us</strong><span class="tap-note">Tap to remember ♡</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="memories section-wrap" id="memories">
+      <div class="section-title"><p class="eyebrow">Little pieces of forever</p><h2>Memory <em>lane.</em></h2><p>Tap a photo to see it a little closer.</p></div>
+      <div class="photo-grid">
+        <button class="memory polaroid" data-caption="A moment I wish I could relive."><span class="photo-slot"><img src="{% static 'img/firstmeet.jpeg' %}" alt="Memory one" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')"><span class="photo-help">memory-1.jpg</span></span><span class="polaroid-caption">little moments ♡</span></button>
+        <button class="memory polaroid" data-caption="You make even the simplest days special."><span class="photo-slot"><img src="{% static 'img/on1.jpeg' %}" alt="Memory two" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')"><span class="photo-help">memory-2.jpg</span></span><span class="polaroid-caption">my happy place</span></button>
+        <button class="memory polaroid" data-caption="One of my favourite versions of us."><span class="photo-slot"><img src="{% static 'img/us.jpeg' %}" alt="Memory three" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')"><span class="photo-help">memory-3.jpg</span></span><span class="polaroid-caption">just us</span></button>
+        <button class="memory polaroid" data-caption="More memories to make, more stories to tell."><span class="photo-slot"><img src="{% static 'img/on2.jpeg' %}" alt="Memory four" onerror="this.style.display='none';this.parentElement.classList.add('empty-photo')"><span class="photo-help">memory-4.jpg</span></span><span class="polaroid-caption">to many more</span></button>
+      </div>
+    </section>
+
+
+    <section class="little-things section-wrap">
+      <div class="section-title"><p class="eyebrow">Things I adore about you</p><h2>It's the little <em>things.</em></h2></div>
+      <div class="reasons">
+        <button class="reason" data-message="Your smile can turn my entire day around.">Your smile <span>♡</span></button>
+        <button class="reason" data-message="Even silence feels comfortable when I'm with you.">The way you make me feel at home <span>♡</span></button>
+        <button class="reason" data-message="I love that we can laugh about the smallest things.">Our silly little laughs <span>♡</span></button>
+        <button class="reason" data-message="Thank you for being exactly who you are.">Simply being you <span>♡</span></button>
+      </div>
+    </section>
+
+    <section class="letter-section section-wrap" id="letter">
+      <div class="section-title"><p class="eyebrow">A note from my heart</p><h2>One letter,<br><em>a thousand feelings.</em></h2><p>There's something I want you to read...</p></div>
+      <button class="envelope" id="envelope" aria-label="Open the love letter">
+        <span class="envelope-heart">♡</span><span class="envelope-label">For you, with love</span><span class="open-label">Tap to open</span>
+      </button>
+    </section>
+
+    <section class="ending section-wrap">
+      <p class="eyebrow">And this is only the beginning</p>
+      <h2>My favourite place<br>will always be <em>beside you.</em></h2>
+      <p>Happy first anniversary, my love.</p>
+      <button class="main-button" id="finalButton">One last surprise ♡</button>
+      <p class="final-message" id="finalMessage">If I had to live this year all over again, I'd still find my way to you. Every single time. ❤️</p>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><button class="close-modal" aria-label="Close">×</button><p class="eyebrow">A memory for us</p><h3 id="modalTitle"></h3><p id="modalText"></p></div>
+  </div>
+  <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="Close photo">×</button><img id="lightboxImage" src="{% static 'img/knr1.jpeg' %}" alt="Selected memory"><p id="lightboxCaption"></p></div>
+  <div class="letter-modal" id="letterModal" role="dialog" aria-modal="true">
+    <div class="letter-paper"><button class="close-letter" aria-label="Close letter">×</button><p class="eyebrow">To my favourite person</p><h3>Happy first anniversary, my love. ♡</h3><p>Thank you for every smile, every conversation, every silly moment and every memory we've made this year.</p><p>You have made ordinary days feel special, and I hope you know how much you mean to me. I can't promise every day will be perfect, but I promise to keep showing up, keep learning, and keep choosing us.</p><p>Here's to more adventures, more laughter, and a lifetime of little moments together.</p><p class="signature">All my love, always. ♡</p></div>
+  </div>
+  <footer>OUR FIRST YEAR · OUR FOREVER STORY ♡</footer>
+  <script  src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+ss
